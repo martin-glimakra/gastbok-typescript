@@ -1,11 +1,23 @@
-export default function Post() {
-    return (
+interface postProps {
+    header: string;
+    postText: string;
+    author?: string;
+    date: any
+}
+
+export default function Post({
+    header, 
+    postText, 
+    author, 
+    date}: postProps) {
+
+        return (
         <div>
-            <h2>Rubrik</h2>
+            <h2>{header}</h2>
             <div>
-                <p>Inlägg</p>
-                <p>Tid</p>
-                <p>Författare</p>
+                <p>{postText}</p>
+                <p>{date.toDateString()}</p>
+                <p>{author}</p>
             </div>
         </div>
     )

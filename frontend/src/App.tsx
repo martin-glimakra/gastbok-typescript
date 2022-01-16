@@ -7,9 +7,10 @@ function App() {
   return (
     <div >
       <Post 
-        //  h={'hej martin'} 
+        header={'rubrik'} 
+        postText= {'post text placeholder'}
         // author={'martin lindahl'} 
-        // dateTime={'dateTimePlaceholder'}
+        date={new Date}
       />
 
     </div>
