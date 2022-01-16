@@ -16,7 +16,7 @@ export default function Post({
             <h2>{header}</h2>
             <div>
                 <p>{postText}</p>
-                <p>{date.toDateString()}</p>
+                <p>{date}</p>
                 <p>{author}</p>
             </div>
         </div>

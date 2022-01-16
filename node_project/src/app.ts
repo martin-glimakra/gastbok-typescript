@@ -8,7 +8,7 @@ app.use(cors())
 
 app.get('/', (req, res) => {
     res.json([{
-      rubrik: 'rubrik placeholder',
+      header: 'rubrik placeholder',
       postText: 'post text placeholder',
       author: 'author placeholder',
       date: new Date

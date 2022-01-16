@@ -22,25 +22,19 @@ function App() {
   }, [])
 
   const [state, setState] = useState<post[]>()
-  console.log(state)
-
-
-
-
-
+  console.log('state', state)
 
   return (
     <div >
-
-{state && state.map((post: post) =>  {
-          return <Post
-            header={'rubrik placeholder'} 
-            postText= {'post text placeholder'}
-            author={post.author} 
-            date={new Date}
-          />
-        }
-)}
+      {state && state.map((post: post) =>  {
+                return <Post
+                  header={post.header} 
+                  postText= {post.postText}
+                  author={post.author} 
+                  date={post.date}
+                />
+              }
+      )}
     </div>
   );
 }
