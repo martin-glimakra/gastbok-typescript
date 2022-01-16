@@ -1,15 +1,15 @@
-interface postProps {
+interface post {
     header: string;
     postText: string;
     author?: string;
-    date: any
+    date: Date
 }
 
 export default function Post({
     header, 
     postText, 
     author, 
-    date}: postProps) {
+    date}: post) {
 
         return (
         <div>

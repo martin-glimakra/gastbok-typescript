@@ -7,7 +7,12 @@ app.use(cors())
 
 
 app.get('/', (req, res) => {
-    res.json({msg: 'This is CORS-enabled for all origins!'})
+    res.json([{
+      rubrik: 'rubrik placeholder',
+      postText: 'post text placeholder',
+      author: 'author placeholder',
+      date: new Date
+  }])
 });
 
 app.listen(port, () => {

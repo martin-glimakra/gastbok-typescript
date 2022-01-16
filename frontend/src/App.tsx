@@ -1,27 +1,46 @@
-import './App.css';
 import Post from './components/Post';
+import { useState, useEffect } from 'react';
+
+interface post {
+  header: string;
+  postText: string;
+  author?: string;
+  date: Date
+}
 
 function App() {
 
-  async function fetchMoviesJSON() {
-    const response = await fetch('http://localhost:4000/');
-    const movies = await response.json();
-    console.log(movies)
-    return movies;
+  useEffect(() => {
+      async function fetchPostJSON() {
+        const response = await fetch('http://localhost:4000/');
+        const posts = await response.json();
+
+        setState(posts)
   }
 
-fetchMoviesJSON()
+    fetchPostJSON()
+  }, [])
+
+  const [state, setState] = useState<post[]>()
+  console.log(state)
+
+
+
+
 
 
   return (
     <div >
-      <Post 
-        header={'rubrik'} 
-        postText= {'post text placeholder'}
-        // author={'martin lindahl'} 
-        date={new Date}
-      />
 
+{state && state.map((post: post) =>  {
+          return <Post
+            header={'rubrik placeholder'} 
+            postText= {'post text placeholder'}
+            author={post.author} 
+            date={new Date}
+          />
+        }
+)}
     </div>
   );
 }
