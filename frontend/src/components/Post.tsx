@@ -1,15 +1,10 @@
-interface post {
-    header: string;
-    postText: string;
-    author?: string;
-    date: Date
-}
+import { InterfacePost } from '../interfaces'
 
 export default function Post({
     header, 
     postText, 
     author, 
-    date}: post) {
+    date}: InterfacePost) {
 
         return (
         <div>

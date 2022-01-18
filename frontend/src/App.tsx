@@ -1,14 +1,12 @@
 import Post from './components/Post';
 import { useState, useEffect } from 'react';
+import { InterfacePost } from './interfaces'
 
-interface post {
-  header: string;
-  postText: string;
-  author?: string;
-  date: Date
-}
+
 
 function App() {
+
+  // console.log(InterfacePost)
 
   useEffect(() => {
       async function fetchPostJSON() {
@@ -21,12 +19,12 @@ function App() {
     fetchPostJSON()
   }, [])
 
-  const [state, setState] = useState<post[]>()
+  const [state, setState] = useState<InterfacePost[]>()
   console.log('state', state)
 
   return (
     <div >
-      {state && state.map((post: post) =>  {
+      {state && state.map((post: InterfacePost) =>  {
                 return <Post
                   header={post.header} 
                   postText= {post.postText}

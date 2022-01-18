@@ -9,13 +9,13 @@ app.use(cors())
 app.get('/', (req, res) => {
     res.json([
       {
-        header: 'rubrik placeholder',
+        header: 'header placeholder',
         postText: 'post text placeholder',
         author: 'author placeholder',
         date: new Date
     },
     {
-      header: 'rubrik placeholder2',
+      header: 'header placeholder2',
       postText: 'post text placeholder2',
       author: 'author placeholder2',
       date: new Date
