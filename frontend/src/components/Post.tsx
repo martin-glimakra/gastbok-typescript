@@ -6,6 +6,8 @@ export default function Post({
     author, 
     date}: InterfacePost) {
 
+
+        console.log(postText, typeof postText)
         return (
         <div>
             <h2>{header}</h2>

@@ -6,8 +6,6 @@ import { InterfacePost } from './interfaces'
 
 function App() {
 
-  // console.log(InterfacePost)
-
   useEffect(() => {
       async function fetchPostJSON() {
         const response = await fetch('http://localhost:4000/');

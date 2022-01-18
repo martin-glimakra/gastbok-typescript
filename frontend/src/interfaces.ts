@@ -1,6 +1,6 @@
 export interface InterfacePost {
     header: string;
-    postText: Date;
+    postText: string;
     author?: string;
-    date: Date
+    date: string
   }
